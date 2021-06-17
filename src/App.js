@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './styles/app.scss'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import CreateGame from './routes/CreateGame'
+
+const Root = () => (
+  <Router>
+    <React.Fragment>
+      {/* <Header /> */}
+      <Switch>
+        {/* <Route path='/' exact component={Home} /> */}
+        <Route path="/create-game" component={CreateGame} />
+        {/* <Route path='/join' component={Join} /> */}
+        <Redirect to="/" />
+      </Switch>
+    </React.Fragment>
+  </Router>
+)
+
+const App = () => {
+  return <Root />
 }
 
-export default App;
+export default App
