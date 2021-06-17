@@ -1,9 +1,12 @@
 import React from 'react'
 import { useFieldArray, useForm } from 'react-hook-form'
+import { useHistory } from 'react-router-dom'
 import GamerInput from '../../components/CreateGameForm/GamerInput'
+import { addGame } from '../../utils/games'
 import './styles.scss'
 
 const CreateGameForm = () => {
+  const history = useHistory()
   const [currentGamersCount, setCurrentGamersCount] = React.useState(5)
   const { register, handleSubmit, control } = useForm({
     defaultValues: {
@@ -18,7 +21,8 @@ const CreateGameForm = () => {
   })
 
   const submit = data => {
-    console.log(data)
+    addGame(data)
+    history.push('/')
   }
 
   const removeGamer = indexToRemove => () => {
