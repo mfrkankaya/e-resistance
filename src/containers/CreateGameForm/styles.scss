@@ -12,33 +12,3 @@ input {
     border-color: #999;
   }
 }
-
-.form-actions {
-  display: flex;
-  align-items: center;
-  margin-top: 2rem;
-
-  button {
-    height: 3rem;
-    flex: 1;
-    border-radius: 0.75rem;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: #111;
-    color: #eee;
-    border: 1px solid #444;
-    outline: none;
-
-    &:first-child{
-      margin-right: 0.5rem;
-    }
-
-    &:last-child{
-      margin-left: 0.5rem;
-    }
-
-    &:active{
-      opacity: 0.5;
-    }
-  }
-}

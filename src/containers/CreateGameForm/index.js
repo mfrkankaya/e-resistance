@@ -58,10 +58,12 @@ const CreateGameForm = () => {
       ))}
 
       <div className="form-actions">
-        <button type="button" onClick={addGamer}>
+        <button type="button" onClick={addGamer} className="primary-btn">
           Oyuncu Ekle
         </button>
-        <button type="submit">Oluştur</button>
+        <button type="submit" className="primary-btn">
+          Oluştur
+        </button>
       </div>
     </form>
   )

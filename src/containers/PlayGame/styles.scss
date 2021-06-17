@@ -1,0 +1,52 @@
+.gamer-role-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.mission-cards {
+  display: flex;
+  flex-direction: column;
+
+  .mission-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    color: #777;
+
+    &.reversed {
+      div:first-child {
+        order: 2;
+      }
+
+      div:last-child {
+        order: 1;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.select-card {
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.result-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  .result-card {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}

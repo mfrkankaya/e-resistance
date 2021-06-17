@@ -2,6 +2,7 @@ import * as localstore from './localstore'
 import uniqid from 'uniqid'
 
 export const getGames = () => localstore.getItem('games') || []
+export const getGame = id => localstore.getItem('games').find(game => game.id === id)
 
 export const addGame = game => {
   const currentGames = getGames()

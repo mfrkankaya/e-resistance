@@ -1,0 +1,22 @@
+.gamer-role-card {
+  text-align: center;
+  padding: 1rem 0.5rem;
+  transition: 0.2s ease-in-out;
+
+  &.selected {
+    border-color: #999;
+  }
+  h4 {
+    margin: 0;
+  }
+
+  span {
+    margin: 2rem 0;
+    display: block;
+  }
+
+  button {
+    background-color: transparent;
+    color: #aaa;
+  }
+}

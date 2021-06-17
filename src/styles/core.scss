@@ -1,5 +1,8 @@
 * {
   box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
 }
 
 html {
@@ -26,6 +29,72 @@ body {
   margin: 0 auto;
 }
 
+.mt-1 {
+  margin-top: 1rem;
+}
+
 .full-width {
   width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+a.create-game {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+
+  button {
+    &:first-child {
+      margin-right: 0.5rem;
+    }
+
+    &:last-child {
+      margin-left: 0.5rem;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.primary-btn {
+  height: 3rem;
+  padding: 0 2rem;
+  flex: 1;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #111;
+  color: #eee;
+  border: 1px solid #444;
+  outline: none;
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 0.25;
+  }
 }
